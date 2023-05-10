@@ -96,7 +96,7 @@ comments:
     issue_term: # < url | pathname | title | ...>
   # Giscus options › https://giscus.app
   giscus:
-    repo: # <gh-username>/<repo>
+    repo: https://github.com/vinhtran1/vinhtran1.github.io
     repo_id:
     category:
     category_id:

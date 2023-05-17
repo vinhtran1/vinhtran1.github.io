@@ -56,7 +56,7 @@ Baidu đã sắp xếp lại 63 bit như sau:
 - 22 bit để đánh dấu ID của các server
 - 13 bit số đếm
 
-Link tham khảo thuật toán của Baidu ở đây: [link](https://github.com/baidu/uid-generator)
+Link tham khảo thuật toán của Baidu ở đây:  [https://github.com/baidu/uid-generator](https://github.com/baidu/uid-generator)
 
 ## Sonyflake
 
@@ -67,7 +67,7 @@ Trong khi đó, Sony lại sắp xếp 63 bit như sau:
 - 8 bits số thứ tự
 - 16 bits đánh dấu ID của server
 
-Link tham khảo thuật toán ở đây: [link](https://github.com/sony/sonyflake)
+Link tham khảo thuật toán ở đây: [https://github.com/sony/sonyflake](https://github.com/sony/sonyflake)
 
 ## Kết luận
 
@@ -80,3 +80,4 @@ Tùy vào quy mô hệ thống của mỗi dự án mà sẽ có chiến lược
 [https://www.callicoder.com/distributed-unique-id-sequence-number-generator/](https://www.callicoder.com/distributed-unique-id-sequence-number-generator/) 
 
 [https://blog.devgenius.io/7-famous-approaches-to-generate-distributed-id-with-comparison-table-af89afe4601f](https://blog.devgenius.io/7-famous-approaches-to-generate-distributed-id-with-comparison-table-af89afe4601f)
+[https://blog.twitter.com/engineering/en_us/a/2010/announcing-snowflake](https://blog.twitter.com/engineering/en_us/a/2010/announcing-snowflake)

@@ -6,17 +6,17 @@ tags: [PostgreSQL]
 pin: false
 ---
 
-# Bài toán
+## Bài toán
 
 Việc gom dữ liệu từ các nguồn về thành một nguồn duy nhất là công việc thường gặp ở vị trí Data Engineer, Data Analyst, Data Scientist. Dữ liệu ở các cơ sở dữ liệu (CSDL) khác nhau sẽ có nhu cầu được tập hợp về một nơi để dễ thực hiện truy vấn. Một cách thường thấy là sử dụng một tool của bên thứ ba để sync data từ CSDL nguồn đến CSDL đích
 
 Bài viết này muốn giới thiệu một kỹ thuật khác. Trong PostgreSQL có một kỹ thuật mà ta có thể từ vị trí của một CSDL nguồn có thể kết nối tới và lấy dữ liệu từ CSDL đích, gọi là **Foreign Data Wrapper (FDW)**
 
-# Các bước thực hiện
+## Các bước thực hiện
 
-## Bước 0: Một số chuẩn bị ban đầu
+### Bước 0: Một số chuẩn bị ban đầu
 
-### Bước 0.1: Chuẩn bị 2 database
+##### Bước 0.1: Chuẩn bị 2 database
 
 Thiết lập CSDL nguồn
 
@@ -46,7 +46,7 @@ Cấu hình CSDL đích:
 - Password: password_target
 - Database: postgres
 
-### Bước 0.2: Chuẩn bị data
+#### Bước 0.2: Chuẩn bị data
 
 Giả sử ta có một bảng transaction có cấu trúc như sau
 
@@ -71,11 +71,11 @@ SELECT CURRENT_TIMESTAMP,
 FROM generate_series(1, 5);
 ```
 
-### Bước 0.3: Chuẩn bị các tài khoản postgresql
+#### Bước 0.3: Chuẩn bị các tài khoản postgresql
 
 Để có thể CSDL đích có thể truy cập và lấy dữ liệu, thì ở phía CSDL nguồn cần có một user có quyền read dữ liệu đó. Trong bài viết này sử dụng user **postgres** nhưng trong thực tế nên tạo riêng một user, chỉ cấp quyền đủ dùng
 
-## Bước 1: Cài đặt extension
+### Bước 1: Cài đặt extension
 
 Truy cập vào CSDL đích và thực hiện câu lệnh:
 
@@ -83,7 +83,7 @@ Truy cập vào CSDL đích và thực hiện câu lệnh:
 CREATE EXTENSION postgres_fdw;
 ```
 
-## Bước 2: Tạo server
+### Bước 2: Tạo server
 
 Tại CSDL đích, thực hiện câu lệnh sau để tạo một server
 
@@ -98,7 +98,7 @@ Trong đó:
 - Các giá trị **host**, **dbname**, **port** là cấu hình của CSDL nguồn
 - **any_server_name** là một cái tên bất kỳ
 
-## Bước 3: Tạo user mapping
+### Bước 3: Tạo user mapping
 
 Để tạo kết nối tới CSDL đích, thực hiện câu lệnh sau đây tại CSDL nguồn
 
@@ -111,7 +111,7 @@ OPTIONS (user 'postgres', password 'password_source')
 
 Lưu ý: Khi muốn setup cho user nào thấy được dữ liệu thì thay **CURRENT_USER** bằng user đó và thực hiện câu lệnh. Chỉ user nào được setup ở bước này mới được nhìn thấy dữ liệu của CSDL nguồn
 
-## Bước 4: Import foreign data
+### Bước 4: Import foreign data
 
 ```sql
 IMPORT FOREIGN SCHEMA public -- schema của CSDL nguồn
@@ -136,17 +136,17 @@ OPTIONS (schema_name 'public', table_name 'transaction');
 
 Bảng public.transaction ở CSDL đích lúc này được gọi là **Foreign Table**
 
-# Tổng kết
+## Tổng kết
 
 Trên đây là hướng dẫn chi tiết từng bước setup một foreign data wrapper. Một số điểm mạnh và yếu của kỹ thuật này như sau
 
-## Điểm mạnh
+### Điểm mạnh
 
 - Cách setup nhanh chóng
 - Không cần dùng đến công cụ của bên thứ ba
 - Có thể được sử dụng như là một phương pháp stream data từ CSDL nguồn đến CSDL đích theo thời gian thực
 - Không chiếm dung lượng ổ đĩa của CSDL đích
 
-## Điểm yếu
+### Điểm yếu
 
 - Trong quá trình làm việc, tác giả nhận thấy điểm yếu lớn nhất của phương pháp này so với việc đồng bộ dữ liệu là tốc độ truy vấn dữ liệu. Khi xuất hiện nhu cầu JOIN các bảng mà trong đó có xuất hiện Foreign Table thì sẽ chậm hơn đối với các Physical Table. Như vậy cần chú ý khi phải thực hiện việc SELECT, JOIN với lượng dữ liệu lớn, câu query phức tạp

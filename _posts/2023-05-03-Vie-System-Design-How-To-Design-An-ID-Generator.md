@@ -80,4 +80,5 @@ Tùy vào quy mô hệ thống của mỗi dự án mà sẽ có chiến lược
 [https://www.callicoder.com/distributed-unique-id-sequence-number-generator/](https://www.callicoder.com/distributed-unique-id-sequence-number-generator/) 
 
 [https://blog.devgenius.io/7-famous-approaches-to-generate-distributed-id-with-comparison-table-af89afe4601f](https://blog.devgenius.io/7-famous-approaches-to-generate-distributed-id-with-comparison-table-af89afe4601f)
+
 [https://blog.twitter.com/engineering/en_us/a/2010/announcing-snowflake](https://blog.twitter.com/engineering/en_us/a/2010/announcing-snowflake)

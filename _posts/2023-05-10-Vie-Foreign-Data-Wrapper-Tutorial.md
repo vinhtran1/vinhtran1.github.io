@@ -1,6 +1,6 @@
 ---
 title: 'Một cách đồng bộ dữ liệu từ PostgreSQL sang PostgreSQL: Foreign Data Wrapper'
-date: 2023-05-10 22:45:00 +0800
+date: 2023-05-10 22:45:00 +0700
 categories: [Tutorial]
 tags: [PostgreSQL]
 pin: false

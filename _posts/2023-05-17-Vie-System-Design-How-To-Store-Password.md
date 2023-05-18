@@ -1,6 +1,6 @@
 ---
 title: 'System Design: Thiết kế một hệ thống lưu trữ password'
-date: 2023-05-17 17:25:00 +0800
+date: 2023-05-17 17:25:00 +0700
 categories: [Blogging]
 tags: [System Design]
 pin: false

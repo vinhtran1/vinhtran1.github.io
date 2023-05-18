@@ -1,6 +1,6 @@
 ---
 title: 'System Design: Thiết kế một hệ thống tạo ID'
-date: 2023-05-04 00:53:00 +0800
+date: 2023-05-04 00:53:00 +0700
 categories: [Blogging]
 tags: [System Design]
 pin: false

@@ -20,7 +20,7 @@ timezone:
 
 title: Vinh Tran # the main title
 
-tagline: Hi, I am working as a data engineer. This is my technical blog # it will display as the sub-title
+tagline: This is my technical blog relate to Data Engineer and other technologies # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
   Vinh Tran Blog
@@ -80,7 +80,7 @@ theme_mode: # [light|dark]
 img_cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar: 
+avatar: https://images2.imgbox.com/07/40/MEUVODP7_o.jpg
 
 # boolean type, the global switch for TOC in posts.
 toc: true

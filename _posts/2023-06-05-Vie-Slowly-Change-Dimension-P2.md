@@ -102,7 +102,7 @@ Dưới đây là bảng tóm tắt về SCD các loại
 | Loại 2 | Thêm một dòng dữ liệu mới vào và đánh dấu dữ liệu này là mới nhất |
 | Loại 3 | Tạo thêm một cột mới bên trong bảng Dimension để lưu lại giá trị cũ trước khi cập nhật |
 | Loại 4 | Tạo một bảng phụ Mini-Dimension để lưu các thuộc tính thường xuyên thay đổi |
-| Loại 5 | Như Loại 4 nhưng có thêm bước cập nhật giá trị mới nhất vào bảng dimension chính (loại 1) |
+| Loại 5 | Như Loại 4 nhưng có thêm bước cập nhật giá trị mới nhất vào bảng Dimension chính (loại 1) |
 | Loại 6 | Thêm một dòng mới để lưu giá trị mới nhất (loại 2), thêm cột mới để ghi nhận giá trị hiện tại (loại 3), cập nhật cột mới bằng giá trị mới trên toàn bộ dữ liệu cũ có liên quan (loại 1) |
 | Loại 7 | Tạo một bảng Current Dimension để lưu lại giá trị mới nhất, song song với bảng History Dmension để lưu các giá trị mới nhất + giá trị lịch sử |
 

@@ -39,8 +39,9 @@ Nếu mọi người chưa biết dùng công cụ gì để tương tác với 
 ```bash
 pip install apache-airflow==2.6.1 apache-airflow-providers-sftp==4.3.0
 ```
+Nếu đã cài đặt Airflow phiên bản mới nhất bằng Docker thì có thể bỏ qua bước này.
 
-Như vậy là tạm thời xong setup các công cụ cần thiết
+Như vậy là tạm thời xong setup các công cụ cần thiết.
 
 ## Bước 1: Tạo connection tới SFTP
 

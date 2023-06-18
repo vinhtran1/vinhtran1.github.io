@@ -135,9 +135,9 @@ Kết quả của regex sẽ là:
 
 Để test đoạn regex này, ta có thể copy kết quả lên trang web [https://regex101.com/](https://regex101.com/)
 
-![Untitled](%5BDraft%5D%20Clean%20Code%20%C4%90o%CC%A3c%20query%20tu%CC%9B%CC%80%20file%20sql%20su%CC%9B%CC%89%20d%205b33af0a4cbd49c09c5229ad190004c8/Untitled.png)
+![RegexMatched](https://thumbs2.imgbox.com/df/17/1U17ubIB_t.png)
 
-Như trong hình có thể thấy, đoạn SQL có tên **GET ORDER DATA BY ORDER DATE** đã được tìm thấy. 
+Như trong hình có thể thấy, đoạn SQL có tên **GET ORDER DATA BY ORDER DATE** đã được tìm thấy (đoạn được tô màu xanh). 
 
 ### 4.3 Lấy SQL theo tên
 

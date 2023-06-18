@@ -241,4 +241,4 @@ Hy vọng với một kỹ thuật nhỏ này sẽ giúp cho việc viết code 
 
 Kỹ thuật này có thể áp dụng để Python đọc một số loại text có format khác với Python chứ không chỉ riêng SQL
 
-Mọi người có thể lấy code đầy đủ tại link Github ở đây nhé: Link
+Mọi người có thể lấy code đầy đủ tại link Github ở đây nhé: [Link](https://github.com/vinhtran1/jinja_and_regex)

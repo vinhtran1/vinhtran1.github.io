@@ -10,3 +10,5 @@ I'm always on the lookout for new technologies and techniques to improve my skil
 
 This blog is a collection of my thoughts, ideas, and experiences, both related to my work as a Data Engineer and to other techonologies. I hope that you'll find something here that interests you. Do not hesitate to leave a comment or contact me if you have any questions or feedback.
 
+- Email: tranphuvinh1@gmail.com
+- LinkedIn: https://www.linkedin.com/in/tranphuvinh/

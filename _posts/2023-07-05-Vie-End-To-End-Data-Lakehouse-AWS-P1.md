@@ -44,10 +44,22 @@ Giải thích một chút về luồng dữ liệu:
 1. Dữ liệu được Extract từ các nguồn và đổ vào S3: Stream (thông qua Kafka) hoặc Batch
 2. Dữ liệu được AWS Lambda đọc và tiến hành chuẩn hóa bao gồm: giải nén (nếu có), xóa trùng, xóa thừa, đổi format,…
 3. Sau khi xử lý, Lambda sẽ load dữ liệu vào S3
-4. Apache Spark sẽ đọc dữ liệu đã chuẩn hóa và tiến hành xử lý
+4. Một Kubernetes Cluster có setup Apache Spark và Delta Lake, được quản lý bởi EKS sẽ đọc dữ liệu đã chuẩn hóa và tiến hành xử lý
 5. Apache Spark load vào S3 những dữ liệu đã làm sạch
 6. Athena sẽ đọc dữ liệu từ S3 bằng query để thực hiện việc tạo report
 7. Athena load kết quả vào Quicksights
+
+## Data Model
+
+Cho dù là Data Lakehouse có thể truy vấn Data Lake như một Data Warehouse thì vẫn cần có Data Model
+
+Data Model mình sẽ dùng trong bài này là Dimensional Modeling với Star Schema được thiết kế như sau:
+
+![DataModel.png](https://thumbs2.imgbox.com/5e/ce/VEjbscTI_t.png)
+
+Bảng Dimension Date và Dimension Time có đặc điểm là chỉ cần tạo một lần nên ta không cần quá bận tâm về dữ liệu này. Dữ liệu sẽ chủ yếu biến động ở 2 bảng Dimension Customer và Fact Sales. 
+
+Khái niệm bảng Fact, Dimension và Star Schema trong Data Warehouse là gì các bạn có thể tham khảo trên Internet nhé
 
 ## Nội dung chuỗi bài viết
 

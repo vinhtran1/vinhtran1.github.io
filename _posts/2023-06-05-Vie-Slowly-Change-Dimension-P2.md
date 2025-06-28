@@ -6,8 +6,6 @@ tags: [Data Warehouse]
 pin: false
 ---
 
-# [Draft] Slowly Change Dimension trong Data Warehouse - Phần 2/2
-
 ## Giới thiệu
 
 Ở bài viết trước ([Slowly Change Dimension trong Data Warehouse - Phần 1/2](https://vinhtran1.github.io/posts/Vie-Slowly-Change-Dimension-P1/)) đã nói về các cách tổ chức SCD khác nhau. Trong thực tế sẽ có các trường hợp không sử dụng đơn lẻ từng loại mà là kết hợp nhiều loại với nhau. Ở bài viết này mình sẽ giới thiệu một số cách kết hợp của các cách đã giới thiệu ở phần 1

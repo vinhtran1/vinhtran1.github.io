@@ -1,6 +1,6 @@
 ---
 title: 'PostgreSQL Query Tuning thực chiến: ANY(ARRAY) vs IN và LEFT JOIN vs UNION ALL'
-date: 2026-09-24 18:00:00 +0700
+date: 2026-09-24 14:30:00 +0700
 categories: [Database, SQL]
 tags: [PostgreSQL, SQL Tuning, Query Optimization, Performance, Database Index, Database Internals]
 keywords: [PostgreSQL, SQL Tuning, Query Optimization, Performance, Database Index]

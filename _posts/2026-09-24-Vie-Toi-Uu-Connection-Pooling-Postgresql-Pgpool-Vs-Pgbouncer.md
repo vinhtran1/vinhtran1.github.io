@@ -1,6 +1,6 @@
 ---
 title: 'Tối ưu Connection Pooling trong PostgreSQL: So găng PgPool-II và PgBouncer'
-date: 2026-09-24 16:00:00 +0700
+date: 2026-09-24 14:15:00 +0700
 categories: [DevOps, PostgreSQL]
 tags: [PostgreSQL, Connection Pooling, PgBouncer, PgPool, High Availability, Database Performance]
 keywords: [PostgreSQL, Connection Pooling, PgBouncer, PgPool, High Availability]
